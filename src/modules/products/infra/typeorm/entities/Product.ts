@@ -17,10 +17,10 @@ class Product {
   @Column()
   name: string;
 
-  @Column()
+  @Column({ type: 'decimal', precision: 3, scale: 2 })
   price: number;
 
-  @Column()
+  @Column('integer')
   quantity: number;
 
   @OneToMany(() => OrdersProducts, post => post.product)
