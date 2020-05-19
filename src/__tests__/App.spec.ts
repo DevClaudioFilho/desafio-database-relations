@@ -49,7 +49,6 @@ describe('App', () => {
       }),
     );
   });
-
   it('should not be able to create a customer with one e-mail thats already registered', async () => {
     const customer = await request(app).post('/customers').send({
       name: 'Rocketseat',
